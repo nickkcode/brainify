@@ -16,12 +16,17 @@ body {
 body::-webkit-scrollbar {
 	width: 0px;
 	background: transparent;
-    border-radius: 20%;
+	border-radius: 20%;
 }
 
 ::selection {
-	background-color: #33cccc; /* Highlight color */
-	color: #000000; /* Text color */
+	background-color: #33cccc;
+	color: #000000;
+}
+
+::-moz-selection {
+	background-color: #33cccc;
+	color: #ffffff;
 }
 
 @layer base {

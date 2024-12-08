@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ModeToggle } from './ModeToggle';
+import { MusicToggle } from './MusicToggle';
 
 const Navbar = () => {
 	return (
@@ -19,7 +20,10 @@ const Navbar = () => {
 					<Link href='#features' className='hover:text-cyan-700'>
 						Features
 					</Link>
-					<ModeToggle />
+					<div className='flex'>
+						<ModeToggle />
+						<MusicToggle />
+					</div>
 				</div>
 			</div>
 		</nav>

@@ -60,19 +60,19 @@ const DemoSection: React.FC<DemoSectionProps> = ({ videoUrl, ss_1 }) => {
   // Variants for side elements
   const sideVariants: Variants = {
     hidden: (direction: number) => ({
-      x: direction === 1 ? 200 : -200,
-      opacity: 0,
+      scale: 1,
+      opacity: 0.6,
       transition: {
         duration: 0.6,
         delay: 0.2,
       },
     }),
     visible: {
-      x: 0,
-      opacity: 0.6,
+      scale: 0.9,
+      opacity: 0.2,
       transition: {
         duration: 0.8,
-        delay: 0.4,
+        delay: 0.2,
       },
     },
   };
@@ -80,7 +80,7 @@ const DemoSection: React.FC<DemoSectionProps> = ({ videoUrl, ss_1 }) => {
   return (
     <div
       ref={sectionRef}
-      className="flex justify-center -translate-y-[150px] relative"
+      className="flex justify-center -translate-y-[100px] relative"
     >
       {/* Main Element */}
       <motion.div

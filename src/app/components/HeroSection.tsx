@@ -1,21 +1,18 @@
 'use client';
 import React from 'react';
 
-import { useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
-
 import { ChevronRight } from 'lucide-react';
 
 import PulsatingButton from '@/components/ui/pulsating-button';
+import Particles from '@/components/ui/particles';
+import Link from 'next/link';
+
+const handleClick = () => {
+	const audio = new Audio('/magic_sound.wav');
+	audio.play();
+};
 
 const HeroSection = () => {
-	const { resolvedTheme } = useTheme();
-	const [color, setColor] = useState('#ffffff');
-
-	useEffect(() => {
-		setColor(resolvedTheme === 'dark' ? '#ffffff' : '#000000');
-	}, [resolvedTheme]);
-
 	return (
 		<div className='flex flex-col justify-center items-center min-h-screen'>
 			<div className='flex px-10 z-20 flex-col justify-center items-center max-w-screen-lg text-center gap-10'>
@@ -36,13 +33,22 @@ const HeroSection = () => {
 					Supercharge your learning with AI-generated study plans,
 					quizzes, and a personalized roadmap to success.
 				</p>
-				<PulsatingButton>
-					<div className='flex items-center pl-2'>
+				<PulsatingButton onClick={handleClick}>
+					<Link href={'/signup'} className='flex items-center pl-2'>
 						Get your study plan
 						<ChevronRight className='scale-75' />
-					</div>
+					</Link>
 				</PulsatingButton>
 			</div>
+
+			<Particles
+				className='absolute inset-0'
+				quantity={500}
+				ease={100}
+				color={'#33cccc'}
+				refresh
+				staticity={100}
+			/>
 		</div>
 	);
 };

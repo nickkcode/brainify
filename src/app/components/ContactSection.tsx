@@ -1,6 +1,7 @@
 'use client';
 
 import { MagicCard } from "@/components/ui/magic-card";
+import { Send } from "lucide-react";
 
 export default function ContactForm() {
 	return (
@@ -60,9 +61,10 @@ export default function ContactForm() {
 							<div>
 								<button
 									type="submit"
-									className="px-6 py-3 text-sm font-medium bg-[#33cccc] border-2 border-black text-black rounded-lg hover:scale-95 transition-all w-full"
+									className="px-6 py-3 text-sm font-medium bg-[#33cccc] border-2 border-black text-black rounded-lg hover:scale-95 transition-all w-full flex justify-center items-center gap-2"
 								>
 									Send Message
+                                    <Send className="scale-75"/>
 								</button>
 							</div>
 						</div>
