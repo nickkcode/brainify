@@ -1,32 +1,29 @@
 import Link from 'next/link';
+import { ModeToggle } from './ModeToggle';
 
 const Navbar = () => {
-  return (
-    <nav className="p-4 fixed top-0 w-full mx-auto">
-      <div className="flex justify-between items-center max-w-screen-lg mx-auto">
-        {/* Logo */}
-        <div className="text-2xl">
-          <Link href="/">Brainify</Link>
-        </div>
+	return (
+		<nav className='p-4 fixed top-0 w-full bg-gradient-to-b from-white dark:from-black via-white/90 dark:via-black/50 pb-28 to-transparent mx-auto z-30'>
+			<div className='flex justify-between items-center max-w-screen-lg mx-auto'>
+				<div className='text-2xl'>
+					<Link href='/'>Brainify</Link>
+				</div>
 
-        {/* Navbar Links */}
-        <div className="space-x-4">
-          <Link href="/" className="hover:text-cyan-700">
-            Home
-          </Link>
-          <Link href="#about" className="hover:text-cyan-700">
-            About
-          </Link>
-          <Link href="#features" className="hover:text-cyan-700">
-            Features
-          </Link>
-          <Link href="#contact" className="hover:text-cyan-700">
-            Contact
-          </Link>
-        </div>
-      </div>
-    </nav>
-  );
+				<div className='space-x-4 flex items-center'>
+					<Link href='/' className='hover:text-cyan-700'>
+						Home
+					</Link>
+					<Link href='#about' className='hover:text-cyan-700'>
+						About
+					</Link>
+					<Link href='#features' className='hover:text-cyan-700'>
+						Features
+					</Link>
+					<ModeToggle />
+				</div>
+			</div>
+		</nav>
+	);
 };
 
 export default Navbar;

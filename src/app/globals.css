@@ -3,12 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-	transition: 300ms ease-in-out;
-}
-
 body {
 	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+    border-radius: 20%;
+}
+
+::selection {
+	background-color: #33cccc; /* Highlight color */
+	color: #000000; /* Text color */
 }
 
 @layer base {
@@ -74,14 +87,5 @@ body {
 	body {
 		background: var(--background);
 		@apply bg-background text-foreground !important;
-	}
-}
-
-@layer base {
-  * {
-    @apply border-border;
-	}
-  body {
-    @apply bg-background text-foreground;
 	}
 }
