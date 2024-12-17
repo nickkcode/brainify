@@ -8,7 +8,7 @@ import Particles from '@/components/ui/particles';
 import Link from 'next/link';
 
 const handleClick = () => {
-	const audio = new Audio('/magic_sound.wav');
+	const audio = new Audio('/switch_sound.mp3');
 	audio.play();
 };
 
@@ -33,12 +33,14 @@ const HeroSection = () => {
 					Supercharge your learning with AI-generated study plans,
 					quizzes, and a personalized roadmap to success.
 				</p>
-				<PulsatingButton onClick={handleClick}>
-					<Link href={'/signup'} className='flex items-center pl-2'>
-						Get your study plan
-						<ChevronRight className='scale-75' />
-					</Link>
-				</PulsatingButton>
+				<Link onClick={handleClick} href={'/signup'}>
+					<PulsatingButton>
+						<div className='flex items-center'>
+							<p>Get your study plan</p>
+							<ChevronRight className='scale-75' />
+						</div>
+					</PulsatingButton>
+				</Link>
 			</div>
 
 			<Particles

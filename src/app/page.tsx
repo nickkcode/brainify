@@ -17,7 +17,7 @@ const Home = () => {
 			<Navbar />
 			<HeroSection />
 			<DemoSection
-				videoUrl={'https://www.w3schools.com/html/mov_bbb.mp4'}
+				videoUrl={'./videos/demo.mp4'}
 				ss_1={ss_1}
 			/>
 			<FeaturesSection />

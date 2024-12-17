@@ -7,7 +7,6 @@ import { Music } from 'lucide-react';
 export function MusicToggle() {
 	const [playing, setPlaying] = React.useState(false);
 	const audioRef = React.useRef<HTMLAudioElement | null>(null);
-    const music = new Audio('/switch_sound.mp3')
     
 	// Initialize the audio object
 	React.useEffect(() => {
@@ -18,8 +17,6 @@ export function MusicToggle() {
     
 	const toggleMusic = () => {
 		if (!audioRef.current) return;
-        music.play();
-
 		if (playing) {
 			audioRef.current.pause();
 		} else {

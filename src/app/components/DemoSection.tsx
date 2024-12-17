@@ -59,17 +59,17 @@ const DemoSection: React.FC<DemoSectionProps> = ({ videoUrl, ss_1 }) => {
 
   // Variants for side elements
   const sideVariants: Variants = {
-    hidden: (direction: number) => ({
+    hidden: (d) => ({
       scale: 1,
-      opacity: 0.6,
+      opacity: 0.8,
       transition: {
         duration: 0.6,
         delay: 0.2,
       },
     }),
     visible: {
-      scale: 0.9,
-      opacity: 0.2,
+      scale: 0.95,
+      opacity: 0.4,
       transition: {
         duration: 0.8,
         delay: 0.2,
@@ -84,7 +84,7 @@ const DemoSection: React.FC<DemoSectionProps> = ({ videoUrl, ss_1 }) => {
     >
       {/* Main Element */}
       <motion.div
-        className="relative overflow-hidden z-10 rounded-lg shadow-2xl w-[60%] border"
+        className="relative border-[#33cccc] overflow-hidden z-10 rounded-lg shadow-2xl w-[60%] border-2"
         animate={mainControls}
       >
         <video
@@ -99,7 +99,7 @@ const DemoSection: React.FC<DemoSectionProps> = ({ videoUrl, ss_1 }) => {
 
       {/* Right Side Element */}
       <motion.div
-        className="absolute -right-96 bottom-10 opacity-60 z-0 overflow-hidden rounded-lg shadow-2xl w-[50%] border"
+        className="absolute -right-96 bottom-10 opacity-60 z-0 overflow-hidden rounded-lg shadow-2xl w-[50%] blur-[1px] border border-[#33cccc]"
         custom={1} // Right direction
         variants={sideVariants}
         initial="hidden"
@@ -114,7 +114,7 @@ const DemoSection: React.FC<DemoSectionProps> = ({ videoUrl, ss_1 }) => {
 
       {/* Left Side Element */}
       <motion.div
-        className="absolute -left-96 bottom-10 opacity-60 z-0 overflow-hidden rounded-lg shadow-2xl w-[50%] border"
+        className="absolute -left-96 bottom-10 opacity-60 z-0 overflow-hidden rounded-lg shadow-2xl w-[50%] blur-[1px] border border-[#33cccc]"
         custom={-1} // Left direction
         variants={sideVariants}
         initial="hidden"

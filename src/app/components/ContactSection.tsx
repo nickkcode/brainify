@@ -20,7 +20,7 @@ export default function ContactForm() {
 					<form
 						action="https://formsubmit.co/your-email@example.com"
 						method="POST"
-						className="grid grid-cols-1 md:grid-cols-2 gap-8"
+						className="grid grid-cols-1 md:grid-cols-[3fr,5fr] gap-8 items-start"
 					>
 						{/* Left Section */}
 						<div className="space-y-6">
@@ -37,7 +37,7 @@ export default function ContactForm() {
 									name="name"
 									required
 									placeholder="i.e Charlie"
-									className="w-full mt-2 px-4 py-2 border rounded-lg text-gray-500 placeholder-gray-300 focus:ring-cyan-500 focus:border-cyan-500"
+									className="w-full mt-2 px-4 py-2 border rounded-lg text-gray-500 placeholder-gray-300 focus:ring-black focus:border-black outline-black"
 								/>
 							</div>
 
@@ -54,7 +54,7 @@ export default function ContactForm() {
 									name="email"
 									required
 									placeholder="example@gmail.com"
-									className="w-full mt-2 px-4 py-2 border rounded-lg text-gray-500 placeholder-gray-300 focus:ring-cyan-500 focus:border-cyan-500"
+									className="w-full mt-2 px-4 py-2 border rounded-lg text-gray-500 placeholder-gray-300 focus:ring-cyan-500 focus:border-cyan-500 outline-black"
 								/>
 							</div>
 
@@ -64,13 +64,13 @@ export default function ContactForm() {
 									className="px-6 py-3 text-sm font-medium bg-[#33cccc] border-2 border-black text-black rounded-lg hover:scale-95 transition-all w-full flex justify-center items-center gap-2"
 								>
 									Send Message
-                                    <Send className="scale-75"/>
+									<Send className="scale-75" />
 								</button>
 							</div>
 						</div>
 
 						{/* Right Section */}
-						<div className="flex flex-col">
+						<div>
 							<label
 								htmlFor="message"
 								className="block text-sm font-medium text-gray-500"
@@ -82,8 +82,8 @@ export default function ContactForm() {
 								name="message"
 								required
 								placeholder="Type your message..."
-								rows={5}
-								className="flex-1 mt-2 px-4 py-2 border rounded-lg text-gray-500 placeholder-gray-300 focus:ring-cyan-500 focus:border-cyan-500 resize-none"
+								rows={8}
+								className="w-full mt-2 px-4 py-2 border rounded-lg text-gray-500 placeholder-gray-300 focus:ring-cyan-500 focus:border-cyan-500 resize-none"
 							></textarea>
 						</div>
 					</form>
