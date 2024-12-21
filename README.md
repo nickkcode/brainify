@@ -1,1 +1,1 @@
-NextStep - AI powered roadmaps just for you
+Brainfy - AI Powered Personalized Roadmaps
