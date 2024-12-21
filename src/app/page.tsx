@@ -1,25 +1,15 @@
-import HeroSection from '@/app/components/HeroSection';
+import HeroSection from '@/components/main/HeroSection';
 import React from 'react';
-import Navbar from './components/Navbar';
-import FeaturesSection from './components/FeaturesSection';
-import Footer from './components/Footer';
-import ContactForm from './components/ContactSection';
-import DemoSection from './components/DemoSection';
-
-// import vid from '../assets/demo.mp4'
-import ss_1 from '../../public/ss_1.png';
+import FeaturesSection from '../components/main/FeaturesSection';
+import Footer from '../components/main/Footer';
+import ContactForm from '../components/main/ContactSection';
+import Navbar from '@/components/main/Navbar';
 
 const Home = () => {
 	return (
-		<div className='relative'>
-
-
+		<div className='relative bg-black'>
 			<Navbar />
 			<HeroSection />
-			<DemoSection
-				videoUrl={'./videos/demo.mp4'}
-				ss_1={ss_1}
-			/>
 			<FeaturesSection />
 			<ContactForm />
 			<Footer />

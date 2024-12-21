@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Navbar from './components/Navbar';
-import { ThemeProvider } from './components/theme-provider';
+import { AuthProvider } from '@/app/context/authContext';
+import { ThemeProvider } from '@/components/main/theme-provider';
 
 export const metadata: Metadata = {
 	title: 'Brainify',
@@ -15,14 +15,16 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en' suppressHydrationWarning>
-			<ThemeProvider
-				attribute='class'
-				defaultTheme='system'
-				enableSystem
-				disableTransitionOnChange
-			>
-				<body className={'antialiased'}>{children}</body>
-			</ThemeProvider>
+			<AuthProvider>
+				<ThemeProvider
+					attribute='class'
+					defaultTheme='system'
+					enableSystem
+					disableTransitionOnChange
+				>
+					<body className={'antialiased'}>{children}</body>
+				</ThemeProvider>
+			</AuthProvider>
 		</html>
 	);
 }
